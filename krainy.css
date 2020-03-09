@@ -1,0 +1,114 @@
+.krainy {
+        margin-left: 5vw;
+        position: relative;
+        top: 0;
+        overflow: hidden;
+}
+.krainy div {
+    height: 350px;
+    width: 90vw;
+
+}
+
+div.krainyWioska, div.krainyGargamel, div.krainyAqua, div.krainyPapa, div.krainyMuchomor {
+    /* transform: scale(0); */
+    display: flex;
+    overflow: hidden;
+    transition: 2s;
+}
+
+div.krainyWioska.active, div.krainyGargamel.active, div.krainyAqua.active, div.krainyPapa.active, div.krainyMuchomor.active {
+    transform: translateX(0);
+}
+
+div.krainyWioska  {
+    background-color: rgb(196, 105, 105);
+    transform: translateX(-100vw);
+}
+
+div.krainyWioska div:last-child {
+    background-image: url(images/wioska.jpg);
+
+}
+
+div.krainyGargamel {
+    background-color: rgb(34, 80, 141);
+    transform: translateX(100vw);
+}
+
+div.krainyGargamel div:first-child {
+    background-image: url(images/rollercoaster.jpg);
+
+}
+
+div.krainyAqua {
+    background-color: rgb(26, 173, 58);
+    transform: translateX(-100vw);
+}
+
+div.krainyAqua div:last-child {
+    background-image: url(images/aqua.jpg);
+
+}
+
+div.krainyPapa {
+    background-color: rgb(172, 169, 38);
+    transform: translateX(100vw);
+}
+
+div.krainyPapa div:first-child {
+    background-image: url(images/papa.jpg);
+
+}
+
+div.krainyMuchomor {
+    background-color: rgb(197, 30, 183);
+    transform: translateX(-100vw);
+}
+
+div.krainyMuchomor div:last-child {
+    background-image: url(images/muchomor.jpg);
+
+}
+
+/* obrazki */
+div.krainyWioska div:last-child, div.krainyGargamel div:first-child, div.krainyAqua div:last-child, div.krainyPapa div:first-child, div.krainyMuchomor div:last-child {
+    background-size: cover;
+    overflow: hidden;
+    transition: 1s;
+}
+div.krainyWioska div:last-child:hover, div.krainyGargamel div:first-child:hover, div.krainyAqua div:last-child:hover, div.krainyPapa div:first-child:hover, div.krainyMuchomor div:last-child:hover {
+    transform: rotate(5deg) scale(1.2);
+    
+
+}
+
+/* teskt: */
+
+div.krainyWioska div:first-child, div.krainyGargamel div:last-child, div.krainyAqua div:first-child, div.krainyPapa div:last-child, div.krainyMuchomor div:first-child {
+    background-color: #fff;
+    z-index: 1;
+}
+
+.krainy div p {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    font-size: 22px;
+    padding: 40px;
+    
+    text-align: center;
+    transform: translate(-50%, -70%);
+    font-family: 'Open Sans Condensed', sans-serif ;
+}
+
+.krainy h2 {
+    margin: 0;
+    padding-top: 40px;
+    padding-bottom: 0;
+    font-size: 40px;
+    text-align:center;
+    font-family: 'Open Sans Condensed', sans-serif ;
+    font-weight: 700;
+}
+

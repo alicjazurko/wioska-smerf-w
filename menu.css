@@ -1,0 +1,155 @@
+/* section.krainy {
+    height: 100vh;
+    background-color: rgb(252, 252, 252);
+} */
+nav {
+    --bg-color: rgb(29, 132, 216);
+    --font-color: white;
+    --border-color: rgb(33, 52, 80);
+    height: 80px;
+    background-color: var(--bg-color);
+    border-bottom: 2px solid var(--border-color);
+    border-top: 2px solid var(--border-color);
+    margin-bottom: 300px;
+    
+}
+
+nav ul {
+    list-style: none;
+    height: 80px; 
+  }
+  
+  nav ul li {
+    margin: auto 15px;
+    display: inline;
+    position: relative;
+    top: 25%;
+    padding-right: 30px;
+  }
+
+  nav ul li a, nav ul li button {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 500;
+    font-size: 26px;
+    color: var(--font-color);
+    font-weight: 500;
+    letter-spacing: 3px;
+    cursor: pointer;
+  }
+  
+  nav ul li:hover a {
+      text-shadow:  5px 5px 5px rgb(22, 22, 22);
+  }
+
+ 
+  nav ul li button {
+    position: absolute;
+    display: block;
+    bottom: -15px;
+    left: 100px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    width: 150px;
+    height: 50px;
+    font-size: 26px;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+
+  }
+
+  nav ul li button span {
+    display: block;
+    line-height: 50px;  
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    left: 0;
+    transition: .2s linear; 
+  }
+
+  
+  nav button span:nth-child(1) {
+    top: 0;
+    left: 0;
+  }
+
+  nav button span:nth-child(2) {
+    top: 0;
+    left: 150px;
+    font-size: 15px;
+  }
+
+  nav button:hover span:nth-child(1) {
+   left: -150px;
+  }
+
+  nav button:hover span:nth-child(2) {
+    left:0;
+  }
+
+  nav section {
+      background-color: var(--border-color);
+      /* background-color: rgb(9, 90, 241); */
+      width: 900px;
+      height: 260px;
+     
+  }
+
+  nav section ul li{
+      display: block;
+      margin: 15px;
+      cursor: pointer;
+      left: 0;
+      transition: 0.3s;
+
+  }
+
+  nav section ul li a {
+       font-size: 20px;
+  }
+
+  nav section {
+      position: absolute;
+      z-index: 10;
+      top: calc(100vh + 82px);
+      height: 0;
+      overflow: hidden;
+      /* display: none; */
+      transition: 0.8s;
+      border-right: 2px solid var(--border-color);
+      border-bottom: 2px solid var(--border-color);
+  }
+
+  nav section section {
+      position: absolute;
+      /* background-color: #fff; */
+      width: 400px;
+      background-image: url('images/wioska.jpg');
+      background-size: cover;
+      height: 0px;
+      top: 20px;
+      right: 20px;
+      /* box-shadow: 0 0 5px 4px rgb(42, 42, 48); */
+      transition: 0.8s;
+      transition-delay: 0.1s;
+      border: 2px solid var(--border-color);
+  }
+
+  nav section ul li:hover {
+      left: 20px;
+  }
+
+  nav section.activeKrainySekcja {
+      height: 260px;
+      overflow: visible;
+      
+  }
+
+  nav section section.activeKrainySekcja {
+    height: 220px;
+    
+  }
