@@ -112,7 +112,7 @@ nav ul {
        font-size: 20px;
   }
 
-  nav section {
+  nav section.krainyMenu, nav section.hours, nav section.lokalizacja {
       position: absolute;
       z-index: 10;
       top: calc(100vh + 82px);
@@ -139,7 +139,7 @@ nav ul {
       border: 2px solid var(--border-color);
   }
 
-  nav section ul li:hover {
+  nav section.krainyMenu ul li:hover {
       left: 20px;
   }
 
@@ -153,3 +153,29 @@ nav ul {
     height: 220px;
     
   }
+
+
+/* godziny otwarcia */
+
+nav section.hours {
+  display: flex;
+}
+
+nav section.hours ul li, nav section.lokalizacja ul li {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 20px;
+  color: white;
+  padding-left: 20px;
+}
+
+nav section.activeGodzinySekcja {
+  height: 150px;
+  overflow: visible;
+  
+}
+
+nav section.activeLokalizacjaSekcja {
+  height: 190px;
+  overflow: visible;
+  
+}

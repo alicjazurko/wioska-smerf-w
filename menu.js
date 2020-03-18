@@ -1,4 +1,5 @@
 
+//KRAINY
 
 const img = document.querySelector('nav section section');
 const wioska = document.querySelector('nav section ul li:nth-child(1) a');
@@ -28,13 +29,38 @@ muchomor.addEventListener('mouseover', function() {
 })
 
 const krainy = document.querySelector('nav ul li:nth-child(1)'); //element menu glównego - krainy
-const sekcjaKrainy = document.querySelector('nav section'); //wyskakujące okienko z krainy
+const sekcjaKrainy = document.querySelector('nav section.krainyMenu'); //wyskakujące okienko z krainy
 const obrazkiKrainy = document.querySelector('nav section section'); //obrazek po najechaniu na menu krainy sekcja
 krainy.addEventListener('click', function() {
+    
+    sekcjaGodziny.classList.remove("activeGodzinySekcja");
+    sekcjaLokalizacja.classList.remove("activeLokalizacjaSekcja");
     sekcjaKrainy.classList.toggle("activeKrainySekcja");
     obrazkiKrainy.classList.toggle("activeKrainySekcja");
-    
 })
 
+//GODZINY OTWARCIA
 
+const open = document.querySelector('nav ul li:nth-child(3) a');
+const sekcjaGodziny = document.querySelector('nav section.hours');
 
+open.addEventListener('click', function() {
+    
+    sekcjaKrainy.classList.remove("activeKrainySekcja");
+    obrazkiKrainy.classList.remove("activeKrainySekcja");
+    sekcjaLokalizacja.classList.remove("activeLokalizacjaSekcja");
+    sekcjaGodziny.classList.toggle("activeGodzinySekcja");
+})
+
+//LOKALIZACJA
+
+const lokalizacja = document.querySelector('nav ul li:nth-child(2) a');
+const sekcjaLokalizacja = document.querySelector('nav section.lokalizacja');
+
+lokalizacja.addEventListener('click', function() {
+    
+    sekcjaGodziny.classList.remove("activeGodzinySekcja");
+    sekcjaKrainy.classList.remove("activeKrainySekcja");
+    obrazkiKrainy.classList.remove("activeKrainySekcja");
+    sekcjaLokalizacja.classList.toggle("activeLokalizacjaSekcja");
+})
